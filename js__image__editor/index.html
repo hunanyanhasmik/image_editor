@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Image Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="icon" href="img/icon.webp" type="image/webp">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <div class="container disable">
+        <div class="title-mode">
+            <h2>JavaScript Image Editor</h2>
+            <div class="mode">
+                <div class="toggle-icon">
+                    <span class="moon"><i class="fa-solid fa-moon"></i></span>
+                    <span class="sun"><i class="fas fa-sun"></i></span>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">Filters</label>
+                    <div class="options for-flex">
+                        <div class="option">
+                            <p class="show_value active">Brightness</p>
+                            <input type="range" max="200" min="0" value="100" id="brightness"
+                                class="brightness filter-input">
+                        </div>
+                        <div class="option">
+                            <p class="filter-name">Saturation</p>
+                            <input type="range" max="200" min="0" value="100" id="saturate"
+                                class="saturate filter-input">
+                        </div>
+                        <div class="option">
+                            <p class="filter-name">Opacity</p>
+                            <input type="range" max="100" min="0" value="100" id="opacity" class="opacity filter-input">
+                        </div>
+                        <div class="option">
+                            <p class="filter-name">Contrast</p>
+                            <input type="range" max="100" min="0" value="100" id="contrast"
+                                class="contrast filter-input">
+                        </div>
+                        <div class="option">
+                            <p class="filter-name">Hue-Rotate</p>
+                            <input type="range" max="100" min="0" value="0" id="hue" class="hue filter-input">
+                        </div>
+                        <div class="option">
+                            <p class="filter-name">Blur</p>
+                            <input type="range" max="40" min="0" value="0" id="blur" class="blur filter-input">
+                        </div>
+                        <div class="option">
+                            <p class="filter-name">Grayscale</p>
+                            <input type="range" max="100" min="0" value="0" id="grayscale"
+                                class="grayscale filter-input">
+                        </div>
+                        <div class="option">
+                            <p class="filter-name">Inversion</p>
+                            <input type="range" max="100" min="0" value="0" id="inversion"
+                                class="inversion filter-input">
+                        </div>
+                        <div class="option">
+                            <p class="filter-name">Sepia</p>
+                            <input type="range" max="100" min="0" value="0" id="sepia" class="sepia filter-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="rotate">
+                    <label class="title">Rotate & Flip</label>
+                    <div class="options">
+                        <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+                        <button id="right"><i class="fa-solid fa-rotate-right"></i></button>
+                        <button id="horizontal"><i class='bx bx-reflect-vertical'></i></button>
+                        <button id="vertical"><i class='bx bx-reflect-horizontal'></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="filter-img">
+                <img src="img/image-placeholder.svg" alt="filter-img">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="reset-filter">Reset Filters</button>
+            <div class="row">
+                <input type="file" class="file-input" accept="image/*" hidden>
+                <button class="choose-img">Choose Image</button>
+                <button class="save-img">Save Image</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
